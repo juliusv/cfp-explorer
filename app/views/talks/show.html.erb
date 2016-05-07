@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Speaker name:</strong>
+  <%= @talk.speaker_name %>
+</p>
+
+<p>
+  <strong>Speaker email:</strong>
+  <%= @talk.speaker_email %>
+</p>
+
+<p>
+  <strong>Speaker twitter:</strong>
+  <%= @talk.speaker_twitter %>
+</p>
+
+<p>
+  <strong>Speaker company:</strong>
+  <%= @talk.speaker_company %>
+</p>
+
+<p>
+  <strong>Speaker biography:</strong>
+  <%= @talk.speaker_biography %>
+</p>
+
+<p>
+  <strong>Talk title:</strong>
+  <%= @talk.talk_title %>
+</p>
+
+<p>
+  <strong>Talk abstract:</strong>
+  <%= @talk.talk_abstract %>
+</p>
+
+<p>
+  <strong>Talk duration:</strong>
+  <%= @talk.talk_duration %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @talk.notes %>
+</p>
+
+<%= link_to 'Edit', edit_talk_path(@talk) %> |
+<%= link_to 'Back', talks_path %>

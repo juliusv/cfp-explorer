@@ -1,0 +1,53 @@
+<%= form_for(@talk) do |f| %>
+  <% if @talk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@talk.errors.count, "error") %> prohibited this talk from being saved:</h2>
+
+      <ul>
+      <% @talk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :speaker_name %><br>
+    <%= f.text_field :speaker_name %>
+  </div>
+  <div class="field">
+    <%= f.label :speaker_email %><br>
+    <%= f.text_field :speaker_email %>
+  </div>
+  <div class="field">
+    <%= f.label :speaker_twitter %><br>
+    <%= f.text_field :speaker_twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :speaker_company %><br>
+    <%= f.text_field :speaker_company %>
+  </div>
+  <div class="field">
+    <%= f.label :speaker_biography %><br>
+    <%= f.text_area :speaker_biography %>
+  </div>
+  <div class="field">
+    <%= f.label :talk_title %><br>
+    <%= f.text_field :talk_title %>
+  </div>
+  <div class="field">
+    <%= f.label :talk_abstract %><br>
+    <%= f.text_area :talk_abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :talk_duration %><br>
+    <%= f.text_field :talk_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

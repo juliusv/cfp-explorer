@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  speaker_name: MyString
+  speaker_email: MyString
+  speaker_twitter: MyString
+  speaker_company: MyString
+  speaker_biography: MyText
+  talk_title: MyString
+  talk_abstract: MyText
+  talk_duration: MyString
+  notes: MyString
+
+two:
+  speaker_name: MyString
+  speaker_email: MyString
+  speaker_twitter: MyString
+  speaker_company: MyString
+  speaker_biography: MyText
+  talk_title: MyString
+  talk_abstract: MyText
+  talk_duration: MyString
+  notes: MyString

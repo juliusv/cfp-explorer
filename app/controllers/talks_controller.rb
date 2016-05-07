@@ -1,3 +1,5 @@
+require 'csv'
+
 class TalksController < ApplicationController
   before_action :set_talk, only: [:show, :edit, :update, :destroy]
 
@@ -59,6 +61,26 @@ class TalksController < ApplicationController
       format.html { redirect_to talks_url, notice: 'Talk was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def import
+  end
+
+  def save_import
+    CSV.parse(params[:csv]) do |row|
+      Talk.create({
+        speaker_name: row[1],
+        speaker_email: row[2],
+        speaker_twitter: row[3],
+        speaker_company: row[4],
+        speaker_biography: row[5],
+        talk_title: row[7],
+        talk_abstract: row[8],
+        talk_duration: row[9],
+        notes: row[10],
+      })
+    end
+    redirect_to talks_path
   end
 
   private

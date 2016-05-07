@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'talks/import'
+  post 'talks/save_import'
   resources :talks
 
   # The priority is based upon order of creation: first created -> highest priority.

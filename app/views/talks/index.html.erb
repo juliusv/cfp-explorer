@@ -1,8 +1,11 @@
-<h1>Listing talks</h1>
+<h1>Talks</h1>
+
+<p><%= link_to "Import CSV", talks_import_path, class: "btn btn-primary" %></p>
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
+      <th>No.</th>
       <th>Speaker name</th>
       <th>Speaker email</th>
       <th>Speaker twitter</th>
@@ -17,8 +20,9 @@
   </thead>
 
   <tbody>
-    <% @talks.each do |talk| %>
+    <% @talks.each_with_index do |talk, index| %>
       <tr>
+        <td><%= index + 1 %></td>
         <td><%= talk.speaker_name %></td>
         <td><%= talk.speaker_email %></td>
         <td><%= talk.speaker_twitter %></td>

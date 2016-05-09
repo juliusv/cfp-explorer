@@ -1,6 +1,6 @@
 <h1>Import CSV</h1>
 
-<%= form_tag("/talks/save_import", method: "post") do %>
+<%= form_tag(talks_save_import_path, method: "post") do %>
   <%= text_area_tag(:csv, "Paste your CSV here...", size: "80x60") %>
   <%= submit_tag "Import" %>
 <% end %>

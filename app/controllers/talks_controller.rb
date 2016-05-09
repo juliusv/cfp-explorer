@@ -67,7 +67,15 @@ class TalksController < ApplicationController
   end
 
   def save_import
+    Talk.destroy_all
+
+    first_line = true
     CSV.parse(params[:csv]) do |row|
+      if first_line
+        first_line = false
+        next
+      end
+
       Talk.create({
         speaker_name: row[1],
         speaker_email: row[2],

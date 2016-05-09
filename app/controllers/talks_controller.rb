@@ -88,7 +88,7 @@ class TalksController < ApplicationController
         notes: row[10],
       })
     end
-    redirect_to talks_path
+    redirect_to talks_url
   end
 
   private
